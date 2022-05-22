@@ -1,6 +1,6 @@
 {{ if ne .chezmoi.os "windows" }}
-AppData/Roaming/bat/config
+AppData
 {{ end }}
 {{ if ne .chezmoi.os "darwin" }}
-.config/bat/config
+.config
 {{ end }}
