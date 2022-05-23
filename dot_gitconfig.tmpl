@@ -1,7 +1,18 @@
 [user]
 	name = Chris Long
 	email = {{ .email }}
+{{ if .signingkey }}
 	signingkey = {{ .signingkey }}
+
+[commit]
+	gpgsign = true
+
+[tag]
+	gpgSign = true
+{{ else }}
+[credential]
+	helper = manager-core
+{{ end }}
 
 [pager]
 	diff = diff-so-fancy | less --tabs=1,5 -RFX
@@ -12,9 +23,3 @@
 	required = true
 	clean = git-lfs clean -- %f
 	process = git-lfs filter-process
-
-[commit]
-	gpgsign = true
-
-[tag]
-	gpgSign = true
