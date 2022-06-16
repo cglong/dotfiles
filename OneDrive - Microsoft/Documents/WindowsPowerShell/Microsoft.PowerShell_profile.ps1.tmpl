@@ -1,2 +1,4 @@
 New-Alias -Name "open" Invoke-Item
+{{- if lookPath "code-insiders" }}
 New-Alias -Name "code" code-insiders.exe
+{{- end }}
