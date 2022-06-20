@@ -1,4 +1,9 @@
 #!/bin/sh
 preview="git diff master...{-1} | delta"
 branch=$(git branch | fzf --preview "$preview")
+
+if [[ "$branch" = "" ]]; then
+    echo "No branch selected."
+    exit
+fi
 git checkout $branch
