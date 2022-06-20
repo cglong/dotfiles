@@ -1,0 +1,4 @@
+#!/bin/sh
+preview="git diff master...{-1} | delta"
+branch=$(git branch | fzf --preview "$preview")
+git checkout $branch
