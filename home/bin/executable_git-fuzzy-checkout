@@ -1,6 +1,6 @@
 #!/bin/sh
 preview="git diff master...{-1} | delta"
-branch=$(git branch | fzf --preview "$preview")
+branch=$(git branch | fzf --preview "$preview" | sed "s/.* //")
 
 if [ -z "$branch" ]; then
     echo "No branch selected."
