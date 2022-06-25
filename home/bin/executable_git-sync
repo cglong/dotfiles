@@ -1,0 +1,4 @@
+#!/bin/sh
+git checkout --quiet --detach
+git fetch "$1" "$2":"$2"
+git checkout --quiet -
