@@ -4,4 +4,5 @@ OneDrive - Microsoft
 {{ end }}
 {{ if ne .chezmoi.os "darwin" }}
 .config/bat
+.zshrc
 {{ end }}
