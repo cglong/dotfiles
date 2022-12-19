@@ -3,4 +3,14 @@
     type = "file"
     url = "https://iterm2.com/shell_integration/zsh"
     refreshPeriod = "168h"
+[".iterm2"]
+    type = "archive"
+    url = "https://github.com/gnachman/iTerm2-shell-integration/archive/main.tar.gz"
+    stripComponents = 2
+    refreshPeriod = "168h"
+    include = [
+{{ range .iTermUtilities }}
+        "*/utilities/{{ . }}",
+{{ end }}
+    ]
 {{ end }}
