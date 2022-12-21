@@ -4,9 +4,18 @@
 # Inserts a blank line between shell prompts
 add_newline = false
 
+[aws]
+disabled = true
+
+[azure]
+disabled = true
+
 [directory.substitutions]
 "Microsoft" = ""
 "OneDrive" = ""
+
+[gcloud]
+disabled = true
 
 [line_break]
 disabled = true
