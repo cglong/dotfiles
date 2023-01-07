@@ -1,6 +1,5 @@
 #!/bin/sh
-defaultBranch=$(git remote show origin | sed -n "/HEAD branch/s/.*: //p")
-preview="git diff $defaultBranch...{-1} | delta"
+preview="git diff origin/HEAD...{-1} | delta"
 branch=$(git branch | fzf --preview "$preview" | sed "s/.* //")
 
 if [ -z "$branch" ]; then
