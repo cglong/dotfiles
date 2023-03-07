@@ -1,1 +1,5 @@
+--map-syntax="*.csproj:XML"
+--map-syntax="*.props:XML"
+--map-syntax="*.targets:XML"
+
 --style=numbers
