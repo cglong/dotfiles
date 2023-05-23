@@ -1,3 +1,5 @@
+$Env:EDITOR = "code-insiders"
+
 Import-Module PSReadLine
 Set-PSReadLineOption -PredictionSource History
 

@@ -4,6 +4,8 @@
 [data]
     email = {{ $email | quote }}
     signingkey = {{ $signingkey | quote }}
+{{- if ne .chezmoi.os "windows" }}
 [edit]
     command = "code"
     args = ["--wait"]
+{{ end }}
