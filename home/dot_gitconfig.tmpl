@@ -7,9 +7,12 @@
 	gpgsign = true
 [tag]
 	gpgSign = true
-{{ else }}
+{{ else if eq .chezmoi.os "windows" }}
 [credential "helperselector"]
 	selected = manager-core
+{{ else }}
+[credential]
+	helper = /usr/local/share/gcm-core/git-credential-manager
 {{ end -}}
 [credential "https://dev.azure.com"]
 	useHttpPath = true
