@@ -11,8 +11,8 @@ disabled = true
 disabled = true
 
 [directory.substitutions]
-"Microsoft" = ""
-"OneDrive" = ""
+"Microsoft" = "󰍲"
+"OneDrive" = "󰏊"
 
 [gcloud]
 disabled = true
