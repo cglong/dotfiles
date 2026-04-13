@@ -1,1 +1,4 @@
-{{- template "Microsoft.PowerShell_profile.ps1" . -}}
+Import-Module PSReadLine
+Set-PSReadLineOption -PredictionSource History
+
+{{ template "Microsoft.PowerShell_profile.ps1" . -}}
